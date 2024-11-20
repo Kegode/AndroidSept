@@ -1,0 +1,126 @@
+{
+  "project_info": {
+    "project_number": "731769591620",
+    "project_id": "myproject-5836c",
+    "storage_bucket": "myproject-5836c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:731769591620:android:ac12513c5ab8739b666911",
+        "android_client_info": {
+          "package_name": "com.example.myapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "731769591620-5sscr18c4sqcdbshaaaj3i7cni2i9apc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrQqi3lnFatf20lioYZn114TQAU81CNHU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "731769591620-5sscr18c4sqcdbshaaaj3i7cni2i9apc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:731769591620:android:68d33303ccdc407d666911",
+        "android_client_info": {
+          "package_name": "com.safari.myanotherfbapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "731769591620-5sscr18c4sqcdbshaaaj3i7cni2i9apc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrQqi3lnFatf20lioYZn114TQAU81CNHU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "731769591620-5sscr18c4sqcdbshaaaj3i7cni2i9apc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:731769591620:android:d031a83528ac6d6a666911",
+        "android_client_info": {
+          "package_name": "com.safari.myfbapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "731769591620-5sscr18c4sqcdbshaaaj3i7cni2i9apc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrQqi3lnFatf20lioYZn114TQAU81CNHU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "731769591620-5sscr18c4sqcdbshaaaj3i7cni2i9apc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:731769591620:android:6049d5e081515f13666911",
+        "android_client_info": {
+          "package_name": "com.school.busschooltracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "731769591620-5sscr18c4sqcdbshaaaj3i7cni2i9apc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrQqi3lnFatf20lioYZn114TQAU81CNHU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "731769591620-5sscr18c4sqcdbshaaaj3i7cni2i9apc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
