@@ -16,9 +16,11 @@ import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -46,6 +48,8 @@ fun SignupScreen(navController: NavController){
     val context = LocalContext.current
     val authViewModel:AuthViewModel = viewModel()
 
+    val isLoading by authViewModel.isLoading.collectAsState()
+
     var userName by remember {
         mutableStateOf(value = "")
     }
@@ -58,16 +62,13 @@ fun SignupScreen(navController: NavController){
     var confirmPassword by remember {
         mutableStateOf(value = "")
     }
-
-
-
+    
     Column(
         modifier = Modifier
             .clip(shape = RoundedCornerShape(10.dp))
             .fillMaxHeight()
             .fillMaxWidth(),
         verticalArrangement = Arrangement.Center
-
 
 
     ) {
@@ -136,24 +137,24 @@ fun SignupScreen(navController: NavController){
             authViewModel.signup(userName, email, password,
                 confirmPassword, navController, context)
             },
+            enabled = !isLoading,
             colors = ButtonDefaults.buttonColors(Color.Black),
             modifier = Modifier
                 .wrapContentWidth()
                 .align(Alignment.CenterHorizontally)
         ) {
+            if (isLoading){
+                CircularProgressIndicator(color = Color.Black, strokeWidth = 4.dp)
+            }else{
             Text(
                 modifier = Modifier.padding(10.dp),
                 text = "REGISTER HERE")
         }
 
 
-    }
-
-
-
+    } }
 
 }
-
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun SignupScreenPreview(){

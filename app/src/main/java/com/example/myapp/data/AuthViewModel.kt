@@ -5,6 +5,7 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModel
 import androidx.navigation.NavController
 import com.example.myapp.models.SignupModel
+import com.example.myapp.navigation.ROUTE_HOME
 import com.example.myapp.navigation.ROUTE_LOGIN
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
@@ -80,11 +81,18 @@ class AuthViewModel : ViewModel(){
                 _isLoading.value = false
                 if (task.isSuccessful){
                     showToast("User Successfully logged in",context)
+                    navController.navigate(ROUTE_HOME)
                 }else{
                     _errorMessage.value = task.exception?.message
                     showToast(task.exception?.message ?: "Login failed",context)
 
                 }
             }
+    }
+    fun logout(navController: NavController,context: Context){
+        FirebaseAuth.getInstance().signOut()
+        showToast("Logged Out Successfully",context)
+        navController.navigate(ROUTE_LOGIN)
+
     }
 }
