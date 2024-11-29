@@ -8,6 +8,7 @@ import com.example.myapp.models.SignupModel
 import com.example.myapp.navigation.ROUTE_HOME
 import com.example.myapp.navigation.ROUTE_LOGIN
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -42,6 +43,8 @@ class AuthViewModel : ViewModel(){
                     val userData = SignupModel(userName = userName,
                         email=email,password = password,userId = userId)
                     saveUserToDatabase(userId,userData,navController,context)
+
+                   e
                 } else{
                     _errorMessage.value = task.exception?.message
                     showToast(task.exception?.message ?: "Registration failed",

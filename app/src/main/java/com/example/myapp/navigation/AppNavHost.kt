@@ -5,6 +5,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.myapp.ui.theme.screens.SplashScreen
 import com.example.myapp.ui.theme.screens.client.AddClientScreen
 import com.example.myapp.ui.theme.screens.client.UpdateClientScreen
 import com.example.myapp.ui.theme.screens.client.ViewClients
@@ -14,9 +15,14 @@ import com.example.myapp.ui.theme.screens.signup.SignupScreen
 
 @Composable
 fun AppNavHost(navController: NavHostController = rememberNavController(),
-               startDestination:String = ROUTE_HOME){
+               startDestination:String = ROUTE_SPLASH){
         NavHost(navController = navController,
             startDestination = startDestination ){
+            composable(ROUTE_SPLASH) { SplashScreen {
+                navController.navigate(ROUTE_REGISTER){
+                    popUpTo(ROUTE_SPLASH){inclusive = true}
+                }
+            }  }
             composable(ROUTE_REGISTER){ SignupScreen(navController)}
             composable(ROUTE_LOGIN){ LoginScreen(navController)}
             composable(ROUTE_HOME){ DashBoard(navController) }

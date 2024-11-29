@@ -42,10 +42,15 @@ import com.example.myapp.R
 import com.example.myapp.data.AuthViewModel
 import com.example.myapp.navigation.ROUTE_ADD_CLIENT
 import com.example.myapp.navigation.ROUTE_VIEW_CLIENT
+import com.google.firebase.auth.FirebaseAuth
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DashBoard(navController: NavController){
+
+    val user  = FirebaseAuth.getInstance().currentUser
+    val userName = user?.displayName ?: "Unknown"
+
     val context = LocalContext.current
     Box(modifier = Modifier.fillMaxSize()){
         Image(
@@ -56,7 +61,7 @@ fun DashBoard(navController: NavController){
     Column (modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally){
         TopAppBar(
-            title = { Text(text = "Equity Bank") },
+            title = { Text(text = "User:$userName") },
             navigationIcon = {
                 IconButton(onClick = { /*TODO*/ }) {
                     Icon(imageVector = Icons.Filled.Home,
